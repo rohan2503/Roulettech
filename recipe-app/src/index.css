@@ -6,17 +6,28 @@ body {
 }
 
 .recipe-app {
-  max-width: 800px;
+  display: flex;
+  max-width: 1200px;
   margin: 0 auto;
   background-color: white;
-  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 
-h1 {
+.recipe-list-container {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.recipe-detail-container {
+  flex: 1;
+  padding: 20px;
+}
+
+h1, h2 {
   color: #333;
-  text-align: center;
 }
 
 .recipe-list {
@@ -36,7 +47,7 @@ h1 {
 
 .add-recipe-btn {
   display: block;
-  margin: 20px auto;
+  margin: 20px 0;
   padding: 10px 20px;
   font-size: 16px;
   color: white;
@@ -66,7 +77,6 @@ h1 {
 
 .modal h2 {
   margin-top: 0;
-  color: #333;
 }
 
 .modal form {
@@ -110,4 +120,42 @@ h1 {
 
 .modal button[type="button"]:hover {
   background-color: #da190b;
+}
+
+.recipe-detail {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.recipe-detail h2 {
+  margin-top: 0;
+}
+
+.recipe-detail ul {
+  padding-left: 20px;
+}
+
+.recipe-detail p {
+  line-height: 1.6;
+}
+
+.modal input, .modal textarea, .modal select {
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.modal textarea {
+  height: 100px;
+}
+
+.error {
+  color: #f44336;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 10px;
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import RecipeList from './RecipeList';
 import AddRecipeModal from './AddRecipeModal';
-import RecipeDetailModal from './RecipeDetailModal';
+import RecipeDetail from './RecipeDetail';
 
 const API_URL = 'http://localhost:8000/api/recipes/'; // Adjust this URL if your Django server is running on a different port
 
@@ -53,19 +53,22 @@ const RecipeApp = () => {
 
   return (
     <div className="recipe-app">
-      <h1>Recipe List</h1>
-      <button className="add-recipe-btn" onClick={() => setShowAddModal(true)}>Add Recipe</button>
-      <RecipeList recipes={recipes} onRecipeClick={handleRecipeClick} />
+      <div className="recipe-list-container">
+        <h1>Recipe List</h1>
+        <button className="add-recipe-btn" onClick={() => setShowAddModal(true)}>Add Recipe</button>
+        <RecipeList recipes={recipes} onRecipeClick={handleRecipeClick} />
+      </div>
+      <div className="recipe-detail-container">
+        {selectedRecipe ? (
+          <RecipeDetail recipe={selectedRecipe} />
+        ) : (
+          <p>Select a recipe to view details</p>
+        )}
+      </div>
       {showAddModal && (
         <AddRecipeModal 
           onAddRecipe={handleAddRecipe} 
           onClose={() => setShowAddModal(false)} 
-        />
-      )}
-      {selectedRecipe && (
-        <RecipeDetailModal 
-          recipe={selectedRecipe} 
-          onClose={() => setSelectedRecipe(null)} 
         />
       )}
     </div>
