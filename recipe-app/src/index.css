@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.recipe-app {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+.recipe-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.recipe-list li {
+  cursor: pointer;
+  margin-bottom: 10px;
+  color: #0066cc;
+}
+
+.recipe-list li:hover {
+  text-decoration: underline;
+}
+
+.add-recipe-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-recipe-btn:hover {
+  background-color: #45a049;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  z-index: 1000;
+  width: 80%;
+  max-width: 500px;
+}
+
+.modal h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal input, .modal textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.modal textarea {
+  height: 100px;
+}
+
+.modal button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.modal button[type="submit"] {
+  background-color: #4CAF50;
+}
+
+.modal button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.modal button[type="button"] {
+  background-color: #f44336;
+}
+
+.modal button[type="button"]:hover {
+  background-color: #da190b;
+}
