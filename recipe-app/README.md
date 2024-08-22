@@ -1,105 +1,70 @@
-# Django Recipe Project
+# Getting Started with Create React App
 
-## Overview
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This Django-based web application allows users to create, view, and manage recipes. It provides a RESTful API for recipe management, including features such as listing recipes, adding new recipes, and viewing recipe details.
+## Available Scripts
 
-## Features
+In the project directory, you can run:
 
-- Create new recipes with title, cuisine type, ingredients, and instructions
-- View a list of all recipes
-- View details of individual recipes
-- Update existing recipes
-- Delete recipes
-- API endpoints for all CRUD operations
+### `npm start`
 
-## Technology Stack
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- Backend: Django 3.2+
-- Database: SQLite (default Django database)
-- API: Django Rest Framework
-- Frontend: React (separate repository)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Prerequisites
+### `npm test`
 
-- Python 3.8+
-- pip
-- virtualenv (recommended)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Setup and Installation
+### `npm run build`
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/rohan2503/Roulettech.git
-   cd django-recipe-project
-   ```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-2. Create and activate a virtual environment:
-   ```
-   python3 -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-   ```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-3. Install the required packages:
-   ```
-   pip install -r requirements.txt
-   ```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-4. Apply migrations:
-   ```
-   python manage.py migrate
-   ```
+### `npm run eject`
 
-5. Create a superuser:
-   ```
-   python manage.py createsuperuser
-   ```
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-6. Run the development server:
-   ```
-   python manage.py runserver
-   ```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-## API Endpoints
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-- `GET /api/recipes/`: List all recipes
-- `POST /api/recipes/`: Create a new recipe
-- `GET /api/recipes/{id}/`: Retrieve a specific recipe
-- `PUT /api/recipes/{id}/`: Update a specific recipe
-- `DELETE /api/recipes/{id}/`: Delete a specific recipe
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Data Validation
+## Learn More
 
-The application includes the following validations:
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-- Title: Must be at least 4 characters long
-- Cuisine: Must be selected from a predefined list
-- Ingredients: Must include both ingredient name and quantity
-- Instructions: Each step must be at least 10 words long
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Deployment
+### Code Splitting
 
-This project is designed to be deployed on AWS using a 3-tier architecture. The architecture includes:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-1. Presentation Tier:
-   - Amazon Route 53 for DNS management
-   - Amazon CloudFront as a CDN
-   - Elastic Load Balancer to distribute traffic
-   - EC2 instances in an Auto Scaling group for web servers
+### Analyzing the Bundle Size
 
-2. Application Tier:
-   - EC2 instances in an Auto Scaling group for the Django application
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-3. Data Tier:
-   - Amazon RDS for the database (Note: Currently using SQLite, but can be migrated to RDS)
-   - Amazon S3 for storing static files and media
+### Making a Progressive Web App
 
-Additional components include Amazon VPC for network isolation, AWS IAM for access management, and Amazon CloudWatch for monitoring.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-For detailed deployment instructions, please refer to AWS documentation.
+### Advanced Configuration
 
-## Contact
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-Email - rohangowdahy@gmail.com
+### Deployment
 
-Project Link: https://github.com/rohan2503/Roulettech.git
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
