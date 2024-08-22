@@ -100,6 +100,6 @@ For detailed deployment instructions, please refer to AWS documentation.
 
 ## Contact
 
-Your Name - rohangowdahy@gmail.com
+Email - rohangowdahy@gmail.com
 
 Project Link: https://github.com/rohan2503/Roulettech.git
